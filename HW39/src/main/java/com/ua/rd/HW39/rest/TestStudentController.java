@@ -22,7 +22,7 @@ public class TestStudentController {
     public Optional<ResponseEntity<List<Student>>> findAll() {
         return Optional.ofNullable(ResponseEntity.ok(testStudentService.findAll()));
     }
-    @GetMapping("/test_students/gr{groupId}")
+    @GetMapping("/test_students/{groupId}")
     public Optional<ResponseEntity<List<Student>>> findByGroupId(@PathVariable int groupId) {
 
         return Optional.ofNullable(ResponseEntity.ok(testStudentService.findByGroupId(groupId)));
